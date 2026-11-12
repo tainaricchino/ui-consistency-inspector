@@ -1,0 +1,15 @@
+{
+  "baseUrl": "http://127.0.0.1:3000",
+  "threshold": 0.01,
+  "routes": [
+    { "name": "home", "path": "/" }
+  ],
+  "viewports": [
+    { "name": "desktop", "width": 1280, "height": 720 },
+    { "name": "mobile", "width": 390, "height": 844 }
+  ],
+  "designTokens": {
+    "allowedColors": ["#0F0F0F", "#F5DAE6", "#FFFFFF", "#8B1E24"],
+    "spacingScalePx": [0, 4, 8, 16, 24, 32]
+  }
+}

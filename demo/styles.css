@@ -1,0 +1,20 @@
+:root {
+  --ink: #0F0F0F;
+  --pink: #F5DAE6;
+  --white: #FFFFFF;
+  --red: #8B1E24;
+}
+
+body {
+  margin: 0;
+  background: var(--pink);
+  color: var(--ink);
+  font-family: system-ui, sans-serif;
+}
+
+main {
+  margin: 32px;
+  padding: 24px;
+  background: var(--white);
+  color: var(--ink);
+}

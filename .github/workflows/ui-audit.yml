@@ -1,0 +1,38 @@
+name: UI Consistency Audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  visual-and-token-audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Instalar Chromium (Playwright)
+        run: npx playwright install chromium --with-deps
+
+      - name: Executar UI Consistency Inspector
+        run: npm run audit
+
+      - name: Salvar relatório HTML como artefato
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ui-consistency-report
+          path: reports/report.html
+          retention-days: 7

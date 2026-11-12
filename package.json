@@ -1,0 +1,28 @@
+{
+  "name": "ui-consistency-inspector",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "audit": "tsx src/index.ts",
+    "audit:approve": "tsx src/index.ts --approve",
+    "test": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "pixelmatch": "^8.0.0",
+    "playwright": "^1.65.0",
+    "pngjs": "^7.0.0",
+    "postcss": "^8.5.32"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/pixelmatch": "^5.2.6",
+    "@types/pngjs": "^6.0.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
